@@ -41,8 +41,8 @@ docker-compose up
 ### Use:
 Point browser to docker machine ip (port 80 or port 443)
 
-### If you want to run an hypersonic db instead of mysql, don't need to run none of the steps above. Just run with the following tag:
+### If you want to run an HSQLDB2 db instead of mysql, don't need to run none of the steps above. Just run with the following tag:
 
 ```
-docker run -p 80:8080 -p 443:8443 -d bfreire/liferay:hypersonic
+docker run -p 80:8080 -p 443:8443 -d bfreire/liferay:hsqldb2
 ```
