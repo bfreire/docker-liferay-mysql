@@ -1,10 +1,11 @@
-# Liferay CE Portal 7.0 GA2
+# Liferay Portal 7.0 CE GA5
 #
-# VERSION 1.0
-# Based on ctliv/liferay:6.2
+# VERSION 2.0
+# Dockerfile based on ctliv/liferay:6.2
 #
 
 # 1.0 : initial file with liferay-ce-portal-7.0-ga2
+# 2.0 : initial file with liferay-ce-portal-7.0-ga5
 
 FROM ubuntu
 
@@ -32,15 +33,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 ENV JRE_HOME=$JAVA_HOME/jre
 ENV PATH=$PATH:$JAVA_HOME/bin
 
-# Install liferay (removing sample application "welcome-theme")
+# Install Liferay (removing sample application "welcome-theme")
 ENV LIFERAY_BASE=/opt
-ENV LIFERAY_VER=liferay-ce-portal-7.0-ga2
+ENV LIFERAY_VER=liferay-ce-portal-7.0-ga5
 ENV LIFERAY_HOME=${LIFERAY_BASE}/${LIFERAY_VER}
 ENV TOMCAT_VER=tomcat-8.0.32
 ENV TOMCAT_HOME=${LIFERAY_HOME}/${TOMCAT_VER}
 RUN cd /tmp && \
 	curl -o ${LIFERAY_VER}.zip -k -L -C - \
-	"http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.1%20GA2/liferay-ce-portal-tomcat-7.0-ga2-20160610113014153.zip" && \
+    "https://downloads.sourceforge.net/project/lportal/Liferay%20Portal/7.0.4%20GA5/liferay-ce-portal-tomcat-7.0-ga5-20171018150113838.zip" && \
 	unzip ${LIFERAY_VER}.zip -d /opt && \
 	rm ${LIFERAY_VER}.zip && \
 	rm -fr ${TOMCAT_HOME}/webapps/welcome-theme && \
