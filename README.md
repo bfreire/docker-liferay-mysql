@@ -1,7 +1,7 @@
-Liferay CE 7.0 GA2 on Tomcat with mysql DB (two containers)
+Liferay Portal 7.0 CE GA5 on Tomcat with mysql DB (two containers)
 ==========================================================
 
-Based on ctliv/liferay:6.2
+Dockerfile based on ctliv/liferay:6.2
 
 Image available in docker registry: https://hub.docker.com/r/bfreire/liferay/
 
